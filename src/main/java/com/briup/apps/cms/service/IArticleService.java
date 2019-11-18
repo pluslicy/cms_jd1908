@@ -2,6 +2,7 @@ package com.briup.apps.cms.service;
 
 import com.briup.apps.cms.bean.Article;
 import com.briup.apps.cms.bean.extend.ArticleExtend;
+import com.briup.apps.cms.utils.CustomerException;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ public interface IArticleService {
 
     ArticleExtend findById(long id);
 
+    void saveOrUpdate(Article article) throws CustomerException;
 
-    void saveOrUpdate(Article article);
+    void deleteById(long id) throws CustomerException;
 }
